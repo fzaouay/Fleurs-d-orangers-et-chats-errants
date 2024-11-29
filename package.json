@@ -1,0 +1,11 @@
+{
+  "name": "Fleurs-dorangers-et-chats-errants-Oscars-Short",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Studio Koukaki",
+  "license": "ISC",
+  "description": "Thème enfant à l'ocasion de la nomination aux Oscars Shorts"
+}

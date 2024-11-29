@@ -1,0 +1,15 @@
+{
+    "name": "fzaou/foce-child",
+    "autoload": {
+        "psr-4": {
+            "Fzaou\\FoceChild\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Fedoua",
+            "email": "fedoua.zaouay.osengo@gmail.com"
+        }
+    ],
+    "require": {}
+}
