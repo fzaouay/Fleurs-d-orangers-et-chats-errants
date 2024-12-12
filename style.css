@@ -1,9 +1,67 @@
-/*
- Theme Name:  Fleurs d'orangers et chats errants - Oscars Short
- Theme URI: https://www.koukaki.local
- Author: Studio Koukaki
- Author URI: https://www.koukaki.local
- Template: foce
- Description: Thème enfant à l'ocasion de la nomination aux Oscars Shorts
- Version: 0.1
- */
+/*# sourceMappingURL=style.css.map */
+
+.story__article::after, 
+.site-footer ul::after{
+    animation: rotation 18s linear infinite;
+}
+
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .banner img, #studio h2 {
+    opacity: 0; /* Inizialmente invisibile */
+    transform: translateY(100px); /* Leggermente ridotto di dimensione */
+    animation: apparition-logo 2s ease-in-out forwards; /* L'animazione si avvia automaticamente */
+  }
+  
+  @keyframes apparition-logo {
+    0% {
+      opacity: 0;
+      transform: translateY(100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Stile generale per le sezioni */
+main section {
+    opacity: 0; /* Inizialmente invisibili */
+    animation: fadeIn 2s ease-out forwards; /* Animazione comune */
+  }
+
+/* Direzioni diverse per ogni sezione */
+main section:nth-child(1) {
+    transform: translateY(-50px); /* Arriva dal basso */
+  }
+  
+  main section:nth-child(2) {
+    transform: translateY(50px); /* Arriva da sinistra */
+  }
+  
+  main section:nth-child(3) {
+    transform: translateY(50px); /* Arriva da destra */
+  }
+  
+  main section:nth-child(4) {
+    transform: translateY(50px); /* Arriva dall'alto */
+  }
+  
+ /* Definizione dell'animazione */
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(50); /* La posizione iniziale è impostata sopra */
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0); /* Posizione finale al centro */
+    }
+  } 
