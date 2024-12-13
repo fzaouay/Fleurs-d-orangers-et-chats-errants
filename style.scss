@@ -1,0 +1,109 @@
+// Keyframes per la rotazione
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  // Keyframes per l'apparizione del logo
+  @keyframes apparition-logo {
+    0% {
+      opacity: 0;
+      transform: translateY(100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  // Keyframes per l'effetto flottante
+  @keyframes floating {
+    0% {
+      transform: translate3d(8px, 6px, 0);
+    }
+    12% {
+      transform: translate3d(0px, 6px, 0);
+    }
+    24% {
+      transform: translate3d(6px, -4px, 0);
+    }
+    36% {
+      transform: translate3d(6px, 0px, 0);
+    }
+    48% {
+      transform: translate3d(-4px, -6px, 0);
+    }
+    60% {
+      transform: translate3d(0px, -4px, 0);
+    }
+    72% {
+      transform: translate3d(-8px, 6px, 0);
+    }
+    84% {
+      transform: translate3d(-4px, 0px, 0);
+    }
+    100% {
+      transform: translate3d(6px, 6px, 0);
+    }
+  }
+  
+  // Keyframes per fade-in delle sezioni
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(50); // La posizione iniziale è impostata sopra
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0); // Posizione finale al centro
+    }
+  }
+  
+  // Animazioni per il contenuto
+  .story__article::after, 
+  .site-footer ul::after,  
+  #studio h2::before,
+  #studio h2::after,
+  .site-footer::before,
+  .site-footer::after {
+    animation: rotation 18s linear infinite;
+  }
+  
+  .banner img, #studio h2 {
+    opacity: 0; // Inizialmente invisibile
+    transform: translateY(200px); // Leggermente ridotto di dimensione
+    animation: apparition-logo 2s 300ms both, floating 7s 2s infinite ease-in-out;
+  }
+  
+  // Stile per le sezioni principali
+  main section {
+    opacity: 0; // Inizialmente invisibili
+    animation: fadeIn 0.5s ease-out forwards; // Animazione comune
+  
+    &:nth-child(1) {
+      transform: translateY(-100px); // Arriva dal basso
+    }
+  
+    &:nth-child(2) {
+      transform: translateY(100px); // Arriva da sinistra
+    }
+  
+    &:nth-child(3) {
+      transform: translateY(100px); // Arriva da destra
+    }
+  }
+  
+  // Stili per il background video e immagine hero
+  .hero-video-background {
+    display: block;
+  }
+  
+  .hero-image-background {
+    display: none;
+  }
+  
+  
